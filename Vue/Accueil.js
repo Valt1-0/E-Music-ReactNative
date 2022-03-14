@@ -1,12 +1,29 @@
 import React from "react";
-import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
+import { Dimensions, StyleSheet, Text, TextInput, Image, View, Button } from 'react-native';
 import ImageBackground from "react-native/Libraries/Image/ImageBackground";
+import { logToConsole } from "react-native/Libraries/Utilities/RCTLog";
 import headerimg from '../assets/assets/img/header-bg1.jpg'
+import Icon from 'react-native-vector-icons/Ionicons'
+
+const { height, width } = Dimensions.get('window')
+
+function roundOff(v) {
+    return Math.round(v)
+}
+
+function dimensions() {
+
+    var _borderRadius = roundOff((height + width) / 2),
+        _height = roundOff(height),
+        _width = roundOff(width)
+
+    return { _borderRadius, _height, _width }
+}
 
 class Accueil extends React.Component {
 
 
-    _BoutonClassesInstruments(){
+    _BoutonClassesInstruments() {
         this.props.navigation.navigate('ClassesInstruments')
     }
 
@@ -19,15 +36,15 @@ class Accueil extends React.Component {
                         <Text style={styles.text}>Bienvenue chez E-MUSIC</Text>
                     </ImageBackground>
                 </View>
-
                 <View style={styles.middle}>
-                    <Button color="#00FF00" title="Vers Les Classes D'Instruments" onPress={() => {this._BoutonClassesInstruments() }}/>
-                    <Button color="#0000ff" title="Vers Les Classes D'Instruments" onPress={() => {this._BoutonClassesInstruments() }}/>
-                    <Button color="#FF0000"title="Vers Les Classes D'Instruments" onPress={() => {this._BoutonClassesInstruments() }}/>
+                    <Icon name="people-outline" size={80} color="#fff" style={styles.iconpeople} />
+                    <Icon name="globe-outline" size={90} color="#fff" style={styles.iconworld} />
                 </View>
-                <View style={styles.bottom}></View>
+                <View style={styles.bottom}>
+                <Icon name="musical-notes-outline" size={90} color="#fff" style={styles.iconmusic} />
+                   
+                </View>
             </View>
-            
         );
     }
 
@@ -37,26 +54,26 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "space-between",
-        backgroundColor: "#DD00DD",
+        backgroundColor: "#FFFFFF",
 
-      },
-      top: {
+    },
+    top: {
         flex: 0.3,
         backgroundColor: "grey",
-        borderWidth: 5,
         textAlignVertical: 'center',
-      },
-      middle: {
+        borderWidth: 5,
+    },
+    middle: {
         flex: 0.3,
         justifyContent: "space-around",
-        backgroundColor: "beige",
+        backgroundColor: "blue",
         borderWidth: 5,
-      },
-      bottom: {
+    },
+    bottom: {
         flex: 0.3,
-        backgroundColor: "pink",
+        backgroundColor: "red",
         borderWidth: 5,
-      },
+    },
     image: {
         flexGrow: 1,
         overflow: "hidden",
@@ -66,8 +83,40 @@ const styles = StyleSheet.create({
         marginTop: 80,
         fontSize: 22,
         fontWeight: "bold",
-        textTransform:'uppercase',
+        textTransform: 'uppercase',
+        textAlign: 'center',
+    },
+    iconworld: {
+
         textAlign:'center',
+        backgroundColor: "#ff8800",
+
+
+        height: Dimensions.get('window').height * 0.14,
+        width: Dimensions.get('window').height * 0.14,
+        borderRadius: Math.round((Dimensions.get('window').height + Dimensions.get('window').width) / 2),
+
+    },
+    iconpeople: {
+
+        textAlign:'center',
+        backgroundColor: "#ff8800",
+        margin:"center",
+
+        height: Dimensions.get('window').height * 0.14,
+        width: Dimensions.get('window').height * 0.14,
+        borderRadius: Math.round((Dimensions.get('window').height + Dimensions.get('window').width) / 2),
+
+    },
+    iconmusic: {
+
+        textAlign:'center',
+        backgroundColor: "#ff8800",
+
+        height: Dimensions.get('window').height * 0.14,
+        width: Dimensions.get('window').height * 0.14,
+        borderRadius: Math.round((Dimensions.get('window').height + Dimensions.get('window').width) / 2),
+
     },
 });
 
