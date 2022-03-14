@@ -1,12 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import MyStack from './Navigation/Navigation';
+import 'react-native-gesture-handler';
+import MyDrawer from './Navigation/NavigationDraw';
 
 export default function App() {
   return (
     <NavigationContainer>
-      <MyStack/>
+      <MyDrawer/>
     </NavigationContainer>
   );
 }

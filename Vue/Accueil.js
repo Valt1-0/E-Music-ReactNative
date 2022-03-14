@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, TextInput, View, Button } from 'react-native';
 import ImageBackground from "react-native/Libraries/Image/ImageBackground";
-import headerimg from '../assets/assets/img/header-bg1.jpg'
+import headerimg from '../assets/img/header-bg1.jpg'
 
 class Accueil extends React.Component {
 
@@ -66,7 +66,6 @@ const styles = StyleSheet.create({
         marginTop: 80,
         fontSize: 22,
         fontWeight: "bold",
-        textTransform:'uppercase',
         textAlign:'center',
     },
 });
