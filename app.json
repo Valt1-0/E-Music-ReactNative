@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "EMusic-React",
-    "slug": "EMusic-React",
+    "name": "EMusic-ReactNative",
+    "slug": "EMusic-ReactNative",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

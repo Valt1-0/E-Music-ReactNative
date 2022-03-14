@@ -1,9 +1,8 @@
 import React from "react";
 import { Dimensions, StyleSheet, Text, TextInput, Image, View, Button } from 'react-native';
 import ImageBackground from "react-native/Libraries/Image/ImageBackground";
-import { logToConsole } from "react-native/Libraries/Utilities/RCTLog";
-import headerimg from '../assets/assets/img/header-bg1.jpg'
-import Icon from 'react-native-vector-icons/Ionicons'
+import headerimg from '../assets/img/header-bg1.jpg'
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 const { height, width } = Dimensions.get('window')
 
@@ -37,11 +36,11 @@ class Accueil extends React.Component {
                     </ImageBackground>
                 </View>
                 <View style={styles.middle}>
-                    <Icon name="people-outline" size={80} color="#fff" style={styles.iconpeople} />
-                    <Icon name="globe-outline" size={90} color="#fff" style={styles.iconworld} />
+                    <Ionicons name="people-outline" size={80} color="#fff" style={styles.iconpeople} />
+                    <Ionicons name="globe-outline" size={90} color="#fff" style={styles.iconworld} />
                 </View>
                 <View style={styles.bottom}>
-                <Icon name="musical-notes-outline" size={90} color="#fff" style={styles.iconmusic} />
+                <Ionicons name="musical-notes-outline" size={90} color="#fff" style={styles.iconmusic} />
                    
                 </View>
             </View>
@@ -101,7 +100,6 @@ const styles = StyleSheet.create({
 
         textAlign:'center',
         backgroundColor: "#ff8800",
-        margin:"center",
 
         height: Dimensions.get('window').height * 0.14,
         width: Dimensions.get('window').height * 0.14,
