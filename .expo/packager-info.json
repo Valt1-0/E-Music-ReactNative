@@ -1,0 +1,10 @@
+{
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://xw-bq2.anonymous.e-music-reactnative.exp.direct",
+  "packagerNgrokUrl": "https://xw-bq2.anonymous.e-music-reactnative.exp.direct",
+  "ngrokPid": 7432,
+  "packagerPid": null,
+  "webpackServerPort": null
+}
